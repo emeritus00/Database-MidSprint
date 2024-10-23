@@ -76,7 +76,8 @@ async function displayMovies() {
     const result = await pool.query("SELECT * FROM Movies;");
     result.rows.forEach((movie) => {
       console.log(
-        `${movie.title} (${movie.release_year}), Genre: ${movie.genre}, Director: ${movie.director}`
+        // `${movie.title} (${movie.release_year}), Genre: ${movie.genre}, Director: ${movie.director}`
+        `${movie.movie_id}: ${movie.title} (${movie.release_year}), Genre: ${movie.genre}, Director: ${movie.director}`
       );
     });
   } catch (error) {
