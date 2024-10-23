@@ -78,7 +78,7 @@ JOIN Rentals ON Customers.customer_id = Rentals.customer_id
 JOIN Movies ON Rentals.movie_id = Movies.movie_id
 WHERE Movies.title = 'Avatar';
 
--- Query customer name when a movie by director rented
+-- Query customer name when a movie by specific director rented
 SELECT Customers.first_name, Customers.last_name, Rentals.rental_date, Movies.title
 FROM Customers
 JOIN Rentals ON Customers.customer_id = Rentals.customer_id
