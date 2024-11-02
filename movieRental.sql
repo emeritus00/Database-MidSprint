@@ -13,7 +13,7 @@ CREATE TABLE Customers (
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
-    phone_number VARCHAR(15)
+    phone_number TEXT (15)
 );
 
 -- Create table for Rentals

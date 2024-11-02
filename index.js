@@ -28,7 +28,7 @@ async function createTable() {
         first_name VARCHAR(100) NOT NULL,
         last_name VARCHAR(100) NOT NULL,
         email VARCHAR(255) UNIQUE NOT NULL,
-        phone_number VARCHAR(15)
+        phone_number TEXT(15)
       );
       
       CREATE TABLE IF NOT EXISTS Rentals (
@@ -76,7 +76,6 @@ async function displayMovies() {
     const result = await pool.query("SELECT * FROM Movies;");
     result.rows.forEach((movie) => {
       console.log(
-        // `${movie.title} (${movie.release_year}), Genre: ${movie.genre}, Director: ${movie.director}`
         `${movie.movie_id}: ${movie.title} (${movie.release_year}), Genre: ${movie.genre}, Director: ${movie.director}`
       );
     });
